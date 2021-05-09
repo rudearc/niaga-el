@@ -13,7 +13,7 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $data = array('title' => 'Kategori Produk');
+        $data = array('title' => 'Niaga-el | Kategori Produk');
         return view('kategori.index', $data);
     }
 
@@ -24,7 +24,7 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        $data = array('title' => 'Form Kategori');
+        $data = array('title' => 'Niaga-el | Form Kategori');
         return view('kategori.create', $data);
     }
 
@@ -58,7 +58,7 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        $data = array('title' => 'Form Edit Kategori');
+        $data = array('title' => 'Niaga-el | Form Edit Kategori');
         return view('kategori.edit', $data);
     }
 

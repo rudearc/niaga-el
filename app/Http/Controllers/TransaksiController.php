@@ -13,7 +13,7 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        $data = array('title' => 'Data Transaksi');
+        $data = array('title' => 'Niaga-el | Data Transaksi');
         return view('transaksi.index', $data);
     }
 
@@ -46,7 +46,7 @@ class TransaksiController extends Controller
      */
     public function show($id)
     {
-        $data = array('title' => 'Detail Transaksi');
+        $data = array('title' => 'Niaga-el | Detail Transaksi');
         return view('transaksi.show', $data);
     }
 
@@ -58,7 +58,7 @@ class TransaksiController extends Controller
      */
     public function edit($id)
     {
-        $data = array('title' => 'Form Edit Transaksi');
+        $data = array('title' => 'Niaga-el | Form Edit Transaksi');
         return view('transaksi.edit', $data);
     }
 

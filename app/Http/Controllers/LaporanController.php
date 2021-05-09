@@ -8,12 +8,12 @@ class LaporanController extends Controller
 {
     //
     public function index() {
-        $data = array('title' => 'Form Laporan Penjualan');
+        $data = array('title' => 'Niaga-el | Form Laporan Penjualan');
         return view('laporan.index', $data);
     }
 
     public function proses() {
-        $data = array('title' => 'Laporan Penjualan');
+        $data = array('title' => 'Niaga-el | Laporan Penjualan');
         return view('laporan.proses', $data);
     }
 }

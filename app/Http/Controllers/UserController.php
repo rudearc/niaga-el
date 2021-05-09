@@ -8,12 +8,12 @@ class UserController extends Controller
 {
     //
     public function index() {
-        $data = array('title' => 'User Profil');
+        $data = array('title' => ' Niaga-el | User Profil');
         return view('user.index', $data);
     }
 
     public function setting() {
-        $data = array('title' => 'Setting Profil');
+        $data = array('title' => 'Niaga-el | Setting Profil');
         return view('user.setting', $data);
     }
 }

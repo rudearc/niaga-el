@@ -8,22 +8,22 @@ class HomepageController extends Controller
 {
     public function index()
     {
-        $data = array('title' => 'Homepage');
+        $data = array('title' => 'Niaga-el | Beranda');
         return view('homepage.index', $data);
     }
 
     public function about() {
-        $data = array('title' => 'Tentang Kami');
+        $data = array('title' => 'Niaga-el | Tentang Kami');
         return view('homepage.about', $data);
     }
 
     public function kontak() {
-        $data = array('title' => 'Kontak Kami');
+        $data = array('title' => 'Niaga-el | Kontak Kami');
         return view('homepage.kontak', $data);
     }
 
     public function kategori() {
-        $data = array('title' => 'Kategori Produk');
+        $data = array('title' => 'Niaga-el | Kategori Produk');
         return view('homepage.kategori', $data);
     }
 
