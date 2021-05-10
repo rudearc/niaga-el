@@ -8,7 +8,7 @@ class HomepageController extends Controller
 {
     public function index()
     {
-        $data = array('title' => 'Niaga-el | Beranda');
+        $data = array('title' => 'Niaga-el');
         return view('homepage.index', $data);
     }
 

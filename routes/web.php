@@ -41,7 +41,7 @@ Route::group(['prefix' => 'admin'], function() {
   Route::get('proseslaporan', 'LaporanController@proses');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
