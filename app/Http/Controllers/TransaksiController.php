@@ -11,6 +11,11 @@ class TransaksiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $data = array('title' => 'Niaga-el | Data Transaksi');
