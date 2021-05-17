@@ -93,12 +93,15 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="#" class="nav-link">
-        <ion-icon class="mr-2" name="log-out"></ion-icon>
-        <p>
-          Sign Out
-        </p>
+      <a class="nav-link" href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+          document.getElementById('logout-form').submit();">
+          {{ __('Logout') }}
       </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+          @csrf
+        </form>
     </li>
   </ul>
 </nav>
