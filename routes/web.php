@@ -20,25 +20,29 @@ Route::get('/kategori/{slug}', 'HomepageController@produkperkategori');
 Route::get('/produk', 'HomepageController@produk');
 Route::get('/produk/{slug}', 'HomepageController@produkdetail');
 
-
-Route::group(['prefix' => 'admin'], function() {
-  Route::get('/', 'DashboardController@index');
-  // route kategori
-  Route::resource('kategori', 'KategoriController');
-  // route produk
-  Route::resource('produk', 'ProdukController');
-  // route customer
-  Route::resource('customer', 'CustomerController');
-  // route transaksi
-  Route::resource('transaksi', 'TransaksiController');
-  // profil
-  Route::get('profil', 'UserController@index');
-  // setting profil
-  Route::get('setting', 'UserController@setting');
-  // form laporan
-  Route::get('laporan', 'LaporanController@index');
-  // proses laporan
-  Route::get('proseslaporan', 'LaporanController@proses');
+Route::middleware(['auth'])->group(function () {
+  Route::middleware(['role:Admin'])->group(function () {
+  Route::group(['prefix' => 'admin'], function() {
+    Route::get('/', 'DashboardController@index');
+    // route kategori
+    Route::resource('kategori', 'KategoriController');
+    // route produk
+    Route::resource('produk', 'ProdukController');
+    // route customer
+    Route::resource('customer', 'CustomerController');
+    // route transaksi
+    Route::resource('transaksi', 'TransaksiController');
+    // profil
+    Route::get('profil', 'UserController@index');
+    // setting profil
+    Route::get('setting', 'UserController@setting');
+    // form laporan
+    Route::get('laporan', 'LaporanController@index');
+    // proses laporan
+    Route::get('proseslaporan', 'LaporanController@proses');
+  });    
+});
+    
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
